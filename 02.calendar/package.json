@@ -8,5 +8,10 @@
     "eslint-config-prettier": "^8.8.0",
     "prettier": "^2.8.8"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "dayjs": "^1.11.10",
+    "ja": "^1.2.0",
+    "minimist": "^1.2.8"
+  }
 }
