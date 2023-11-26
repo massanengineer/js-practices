@@ -1,10 +1,15 @@
-const date = new Date();
-const year = date.getFullYear();
-const month = date.getMonth() + 1;
-const bigginingOfMonth = new Date(year, month - 1, 1);
+import minimist from "minimist";
+
+const argv = minimist(process.argv.slice(2));
+
+const today = new Date();
+const year = argv["y"] || today.getFullYear();
+const month = argv["m"] || today.getMonth() + 1;
+
+const startOfMonth = new Date(year, month - 1, 1);
 const endOfMonth = new Date(year, month, 0);
 const endDate = endOfMonth.getDate();
-const startDay = bigginingOfMonth.getDay();
+const startDay = startOfMonth.getDay();
 
 console.log(`      ${month}月 ${year}`);
 console.log("日 月 火 水 木 金 土");
